@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?b4dpg5');
+  src:  url('fonts/icomoon.eot?b4dpg5#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?b4dpg5') format('truetype'),
+    url('fonts/icomoon.woff?b4dpg5') format('woff'),
+    url('fonts/icomoon.svg?b4dpg5#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-camera:before {
+  content: "\e900";
+}
+.icon-film:before {
+  content: "\e901";
+}
+.icon-film1:before {
+  content: "\e902";
+}
+.icon-cassette:before {
+  content: "\e903";
+}
+.icon-download:before {
+  content: "\e904";
+}
+.icon-gamepad:before {
+  content: "\e905";
+}
+.icon-list:before {
+  content: "\e906";
+}
