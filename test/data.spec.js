@@ -1,9 +1,10 @@
 require('../src/data.js');
 
+const pokemon = require('../src/data/pokemon/pokemon.js');
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+describe('Pokemon', () => {
+  it('should be an object', () => {
+    expect(typeof pokemon).toBe('object');
   });
 
   it('returns `example`', () => {
