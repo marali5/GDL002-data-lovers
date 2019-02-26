@@ -2,30 +2,78 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1.0, maximun,scale=1.0, minimum-scale=1.0">
     <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="fonts.css">
+  
   </head>
+
   <body>
-    <h1 class="title">Pokeweb</h1>
-    <h2 class="instruction">Tipo de pokemon</h2>
+  
+    <div class="container">
 
-    <button type="button" onclick="button1" id="water" class="water"></button>
-    <input type="button" id="grass" class="grass">
-    <input type="button" id="fire" class="fire">
-    <input type="button" id="flying" class="flying">
-    <input type="button" id="bug" class="bug">
-    <input type="button" id="normal" class="normal">
-    <input type="button" id="poison" class="poison">
-    <input type="button" id="electric" class="electric">
-    <input type="button" id="ground" class="ground">
-    <input type="button" id="psychic" class="psychic">
-    <input type="button" id="fighting" class="fighting">
-    <input type="button" id="rock" class="rock">
-    <input type="button" id="ice" class="ice">
-    <input type="button" id="ghost" class="ghost">
-    <input type="button" id="dragon" class="dragon">
+      <header>
+        <div class="menuBar">
+          <a href="#" class="bt-menu">Menu<span class="icon-list"></span></a>
+        </div>
+          
+        <nav>
+              <ul>
+                <li><a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=es_419"> <span class="icon-download"></span> POKEMON GO</a></li>
+                <li class="submenu">
+                  <a href="#"> <span class="icon icon-film"></span> MOVIES <span class="caret icon-chevron-small-down"></span></a>
+                  <ul class="children">
+                      <li><a href="https://www.pokemon.com/es/episodios-pokemon/peliculas-pokemon/el-poder-de-uno-2000">Pokémon 2: El poder de uno <span class="icon-dot-single"></span></a></li>
+                      <li><a href="https://www.pokemon.com/es/episodios-pokemon/peliculas-pokemon/el-hechizo-de-los-unown-2001">Pokémon 3: El hechizo de los unown <span class="icon-dot-single"></span></a></li>
+                       <li><a href="https://www.pokemon.com/es/episodios-pokemon/peliculas-pokemon/pokemon-4ever-2002">Pokémon 4Ever <span class="icon-dot-single"></span></a></li>
+                     </ul>  
+                </li>
+                <li><a href="https://pokemon.fandom.com/es/wiki/Videojuegos_de_Pok%C3%A9mon"><span class="icon icon-gamepad"></span> JUEGOS</a></li>
+                <li><a href="https://www.youtube.com/watch?v=jCTG3bg_euQ"><span class="icon icon-cassette"></span> POKERAP</a></li>
+              </ul>
+            </nav>
+        
 
-    
+          <div class="logo">
+              <img src="https://attachment.outlook.live.net/owa/lucero_dn@hotmail.es/service.svc/s/GetAttachmentThumbnail?id=AQMkADAwATM0MDAAMS1hYzEyLTk3YWQtMDACLTAwCgBGAAADUi9JFTayIU%2BdexzdiVFrcQcAZHr6IXsDJEKNh9KHEDAiSQAAAgEMAAAA6yOpHmmc9kKeBwl2NaXxwQAB3DZ59gAAAAESABAA6%2F7AtuGky0KM4dsEMa5MJQ%3D%3D&thumbnailType=2&owa=outlook.live.com&scriptVer=2019021801.07&isc=1&X-OWA-CANARY=GzDmDzcgGkepOyf1qzoHISDVBLGgmtYYych23E29-GFWIwzmwCLvpNakz77gVONBEJbOpRN2E_k.&token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjA2MDBGOUY2NzQ2MjA3MzdFNzM0MDRFMjg3QzQ1QTgxOENCN0NFQjgiLCJ4NXQiOiJCZ0Q1OW5SaUJ6Zm5OQVRpaDhSYWdZeTN6cmciLCJ0eXAiOiJKV1QifQ.eyJ2ZXIiOiJFeGNoYW5nZS5DYWxsYmFjay5WMSIsImFwcGN0eHNlbmRlciI6Ik93YURvd25sb2FkQDg0ZGY5ZTdmLWU5ZjYtNDBhZi1iNDM1LWFhYWFhYWFhYWFhYSIsImFwcGN0eCI6IntcIm1zZXhjaHByb3RcIjpcIm93YVwiLFwicHJpbWFyeXNpZFwiOlwiUy0xLTI4MjctMjEyOTkzLTI4ODY4OTk2MjlcIixcInB1aWRcIjpcIjkxNDgwMDg1NjE3NjU1N1wiLFwib2lkXCI6XCIwMDAzNDAwMS1hYzEyLTk3YWQtMDAwMC0wMDAwMDAwMDAwMDBcIixcInNjb3BlXCI6XCJPd2FEb3dubG9hZFwifSIsIm5iZiI6MTU1MTA0NDE4MCwiZXhwIjoxNTUxMDQ0NzgwLCJpc3MiOiIwMDAwMDAwMi0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDBAODRkZjllN2YtZTlmNi00MGFmLWI0MzUtYWFhYWFhYWFhYWFhIiwiYXVkIjoiMDAwMDAwMDItMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwL2F0dGFjaG1lbnQub3V0bG9vay5saXZlLm5ldEA4NGRmOWU3Zi1lOWY2LTQwYWYtYjQzNS1hYWFhYWFhYWFhYWEifQ.FYmidbZqlpmZ7qUBt-DwVnTyQ0xJhC7PLNu04x0eI6LaCxnpNkWduAUDd3tXGYWn3Q7CyDg3QGXtp2glRsOShzFBK5_rcFUq1uu4YdDMIQmK3JZzb2jy2f0SQ360lwfCJINR-Qa_sMVPYoctrVy3FQVM-EE--tJmx3VjDsroAQ30DtxbttDILYAeLuyX7MKQFuqVmK9mEvQPp6aiFQuJHm3poegcc1y1N3e7b3bgnl6lizFjLEiI4WrqpF-nLA4Li-Y1xZ0NldbNHNBWXUiRiX9_gwVsEc6VqH8LaDAhfBS7oQ4JKCTGhyL32WEGYeGfzE2f9M1niFhhGaPMhsfd0Q&animation=true" width="300" alt="">
+              <img src="https://estaticos.muyinteresante.es/media/cache/1140x_thumb/uploads/images/gallery/5b0fcfa25bafe83df2c203b3/pokemon0_0.jpg" width="300" alt="">
+            </div>
+   
+      </header>
+
+      <section class="main">
+  <input type="text" class="pokemonName" id="writeName"><br>
+    <button id="Water" class="botonAccion water"></button>
+    <button id="Grass" class="botonAccion grass"></button>
+    <button id="Fire" class="botonAccion fire"></button>
+    <button id="Flying" class="botonAccion flying"></button>
+    <button id="Bug" class="botonAccion bug"></button>
+    <button id="Normal" class="botonAccion normal"></button>
+    <button id="Poison" class="botonAccion poison"></button>
+    <button id="Electric" class="botonAccion electric"></button>
+    <button id="Ground" class="botonAccion ground"></button>
+    <button id="Psychic" class="botonAccion psychic"></button>
+    <button id="Fighting" class="botonAccion fighting"></button>
+    <button id="Rock" class="botonAccion rock"></button>
+    <button id="Ice" class="botonAccion ice"></button>
+    <button id="Ghost" class="botonAccion ghost"></button>
+    <button id="Dragon" class="botonAccion dragon"></button>
+  
+  </section>
+
+  <input type="text" id="order">
+
+
+<div id="listaDePokemones" class="pokemonList" ></div>
+
+<p id="pokeName"></p>
+<p id="pokeType"></p>
+<p id="pokeNumber"></p>
+<img id="pokeImage" src="_">
+
+</div>
 
     <div id="root"></div>
     <!-- <script src="./data/injuries/injuries.js"></script> -->
