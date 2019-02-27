@@ -92,7 +92,7 @@ header nav ul li .caret {
         width: 100%;
         position: fixed;
         top: 0;
-        background: green;
+        background:#3E3939;
     }
     .menuBar .bt-menu {
         display: block;
@@ -110,7 +110,7 @@ header nav ul li .caret {
     header nav {
         width: 80%;
         position: fixed;
-        left: 0;
+        right: 100%;
         margin: 0;
         overflow: scroll;
         height: calc(100% - 80px);
@@ -122,6 +122,11 @@ header nav ul li .caret {
     header nav ul li a {
         display: block;
     }
+
+    header nav ul li:hover .children {
+        display: none;
+    }
+
     header nav ul li .children {
         width: 100%;
         position: relative;
@@ -129,7 +134,8 @@ header nav ul li .caret {
     header nav ul li .children li a {
         margin-left: 20px;
     }
-    heaer nav ul li a .caret
+    header nav ul li a .caret
+
 }
 
 
@@ -157,8 +163,6 @@ header nav ul li .caret {
     flex-direction: row;
     flex-flow: wrap;
     justify-items: flex-end;
-    vertical-align: right;
-
 }
 
 /* Botones */
@@ -178,7 +182,7 @@ header nav ul li .caret {
 
 
 .water {
-    background-image: url("https://attachment.outlook.live.net/owa/lucero_dn@hotmail.es/service.svc/s/GetAttachmentThumbnail?id=AQMkADAwATM0MDAAMS1hYzEyLTk3YWQtMDACLTAwCgBGAAADUi9JFTayIU%2BdexzdiVFrcQcAZHr6IXsDJEKNh9KHEDAiSQAAAgEMAAAA6yOpHmmc9kKeBwl2NaXxwQAB2geGPQAAAAESABAALbZPqKKbFk6La4s3DmhbUQ%3D%3D&thumbnailType=2&owa=outlook.live.com&scriptVer=2019021101.04&isc=1&X-OWA-CANARY=aVufX4djhE2nMqTWwHNT7MAnN6aKmtYYKJ87dA1oypm9tyXFH2O-dmUpA77VZvBPHyEXLdIAUzU.&token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjA2MDBGOUY2NzQ2MjA3MzdFNzM0MDRFMjg3QzQ1QTgxOENCN0NFQjgiLCJ4NXQiOiJCZ0Q1OW5SaUJ6Zm5OQVRpaDhSYWdZeTN6cmciLCJ0eXAiOiJKV1QifQ.eyJ2ZXIiOiJFeGNoYW5nZS5DYWxsYmFjay5WMSIsImFwcGN0eHNlbmRlciI6Ik93YURvd25sb2FkQDg0ZGY5ZTdmLWU5ZjYtNDBhZi1iNDM1LWFhYWFhYWFhYWFhYSIsImFwcGN0eCI6IntcIm1zZXhjaHByb3RcIjpcIm93YVwiLFwicHJpbWFyeXNpZFwiOlwiUy0xLTI4MjctMjEyOTkzLTI4ODY4OTk2MjlcIixcInB1aWRcIjpcIjkxNDgwMDg1NjE3NjU1N1wiLFwib2lkXCI6XCIwMDAzNDAwMS1hYzEyLTk3YWQtMDAwMC0wMDAwMDAwMDAwMDBcIixcInNjb3BlXCI6XCJPd2FEb3dubG9hZFwifSIsIm5iZiI6MTU1MTAzNDk1NSwiZXhwIjoxNTUxMDM1NTU1LCJpc3MiOiIwMDAwMDAwMi0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDBAODRkZjllN2YtZTlmNi00MGFmLWI0MzUtYWFhYWFhYWFhYWFhIiwiYXVkIjoiMDAwMDAwMDItMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwL2F0dGFjaG1lbnQub3V0bG9vay5saXZlLm5ldEA4NGRmOWU3Zi1lOWY2LTQwYWYtYjQzNS1hYWFhYWFhYWFhYWEifQ.UU3aAJZWlQRQZguHQvQDh8Ujx0t-IHJkU8ZfjYZPVkI-qvSkdyRiIjqj_OrcIBgr2tPw5GLakLWOakIXHQm7n1-tlO-bqAUwRkSWVOMtxmAx7TJP31C08nF48R_eKKE1wsJi0DSCqfI6RO-MFR45VlabAi7r0TcCFhsUJ1aQYNqDDCq9IEk_Djz1LOrSNXF7EfmTcCAqROCJNJQ8wIRG6eedbzkz_eKqGSolojykYoDSQMAn0AvcVhN5fL86j29AKCwDudC-HwsusffHFuCIX62wUQZ4PZccV-DHlWKV9RrwgiBTWIwlYbbPb_tXxYRjBHThRb6EZhaVgjd7cVZJBQ&animation=true");
+    background-image: url("https://attachment.outlook.live.net/owa/lucero_dn@hotmail.es/service.svc/s/GetAttachmentThumbnail?id=AQMkADAwATM0MDAAMS1hYzEyLTk3YWQtMDACLTAwCgBGAAADUi9JFTayIU%2BdexzdiVFrcQcAZHr6IXsDJEKNh9KHEDAiSQAAAgEMAAAA6yOpHmmc9kKeBwl2NaXxwQAB3DZ58QAAAAESABAALbZPqKKbFk6La4s3DmhbUQ%3D%3D&thumbnailType=2&owa=outlook.live.com&scriptVer=2019021801.07&isc=1&X-OWA-CANARY=oYf6VK9glkS0_Qt8ME2zWCC7R1VUnNYY7v8WGiGxSW0CCnOJ1PTV0F0zdq-0HnWrPWfv_nyF54M.&token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjA2MDBGOUY2NzQ2MjA3MzdFNzM0MDRFMjg3QzQ1QTgxOENCN0NFQjgiLCJ4NXQiOiJCZ0Q1OW5SaUJ6Zm5OQVRpaDhSYWdZeTN6cmciLCJ0eXAiOiJKV1QifQ.eyJ2ZXIiOiJFeGNoYW5nZS5DYWxsYmFjay5WMSIsImFwcGN0eHNlbmRlciI6Ik93YURvd25sb2FkQDg0ZGY5ZTdmLWU5ZjYtNDBhZi1iNDM1LWFhYWFhYWFhYWFhYSIsImFwcGN0eCI6IntcIm1zZXhjaHByb3RcIjpcIm93YVwiLFwicHJpbWFyeXNpZFwiOlwiUy0xLTI4MjctMjEyOTkzLTI4ODY4OTk2MjlcIixcInB1aWRcIjpcIjkxNDgwMDg1NjE3NjU1N1wiLFwib2lkXCI6XCIwMDAzNDAwMS1hYzEyLTk3YWQtMDAwMC0wMDAwMDAwMDAwMDBcIixcInNjb3BlXCI6XCJPd2FEb3dubG9hZFwifSIsIm5iZiI6MTU1MTIzMTQwNywiZXhwIjoxNTUxMjMyMDA3LCJpc3MiOiIwMDAwMDAwMi0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDBAODRkZjllN2YtZTlmNi00MGFmLWI0MzUtYWFhYWFhYWFhYWFhIiwiYXVkIjoiMDAwMDAwMDItMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwL2F0dGFjaG1lbnQub3V0bG9vay5saXZlLm5ldEA4NGRmOWU3Zi1lOWY2LTQwYWYtYjQzNS1hYWFhYWFhYWFhYWEifQ.FiqdZLLj1-0gT7ss2lLvCadr2pdYWNlO3Mivz8_6WCsGOlm513ncMYZpfTL02wJOws0K4LUFzTT7_-k0iiRppCcylLeKDTr8cFd9QQ3X3VYHuC7Ln0pI_CGC2qEQBf70dQYZQooLrQVgsYqHzMFq9mFLPz5Jk5AI2NZxTzP6eptuLBPFYYb2y0PrBr5z-x-BYlGlCSMNZKsmRcClpY1N8lWnP9jvdhcaP4woMRioe088lq0cTpiXotFFB0bJWN3tXiQHmU2e7bnIUgyz9hRJtkoDvcOd4DremE9Vx_ulUHY7g81RsEsPHkUvPxmuNeScgUROnuAsZQi5H9vywd3T7Q&animation=true");
     background-repeat: no-repeat;
     background-size: 100%;
 }
