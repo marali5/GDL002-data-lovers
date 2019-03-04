@@ -11,5 +11,7 @@ const dataLovers = (data, type) => {
  };
 
  // Ordenar 
+
+ 
  
  window.dataLovers = dataLovers; 
