@@ -1,8 +1,15 @@
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
 
-const example = () => {
-  return 'example';
-};
+const data = (window.POKEMON.pokemon);
 
-window.example = example;
+// Filtrado
+
+const dataLovers = (data, type) => {
+  const newArray= data.filter(pokemon => (pokemon.type[0] == type || pokemon.type[1] == type));
+  newArray.forEach(element => console.log(element.name));
+  showCard(newArray);
+  return newArray;
+ };
+
+ // Ordenar 
+ 
+ window.dataLovers = dataLovers; 

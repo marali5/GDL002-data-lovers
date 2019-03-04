@@ -6,9 +6,15 @@ describe('Pokemon', () => {
   it('should be an object', () => {
     expect(typeof pokemon).toBe('object');
   });
+});
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+describe("dataLovers", () => {
+  it("should return pokemon type", () => {
+    expect(dataLovers.pokemon.type(pokemon) ).toBe ("pokemon type");
   });
 });
+
+ // it('returns `example`', () => {
+   // expect(example()).toBe('example');
+ // });
 
