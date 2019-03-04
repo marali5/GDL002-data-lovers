@@ -1,141 +1,77 @@
 * {
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
 }
 
-body {
-    background: white;
-}
-
-.menuBar {
-    display: none;
-}
-
-header {
-    width: 100%
-}
-
-header nav {
-    background: gray;
-    z-index: 1000;
-    max-width: 1000px;
-    width: 95%;
-    margin: 20px auto;  
-}
-
-header nav ul {
+/*Estilos generales menu*/
+nav ul {
     list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-content: center;
 }
 
-header nav ul li {
-    display: inline-block;
+nav li {
+    line-height: 3rem;
     position: relative;
 }
 
-header nav ul li:hover {
-    background: #595555;
-}
-
-header nav ul li a {
-    color: #fff;
-    display: block;
-    text-decoration: none;
-    padding: 20px;
-}
-
-header nav ul li:hover .children {
-    display: block;
-}
-
-header nav ul li .children {
-    display: none;
-    background: #A6A6A6;
+nav li ul {
     position: absolute;
-    width: 150%;
-    z-index: 1000;
 }
 
-header nav ul li .children li {
+nav a {
+    color: white;
     display: block;
+    padding: 5px;
+    text-decoration: none;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+nav a:hover {
+    background: rgba(0, 0,0, .5)
+}
+
+
+
+/*Primer nivel */
+.menu {
+    background: gray;
+    overflow: auto;
+    display: table;
+    width: 100%;
+}
+
+nav > ul > li {
+    float: left;
+}
+
+/*Segundo nivel */
+nav li li {
+    background: lightgray;
+    width: 260px;
+    transition: all .5s;
+    max-height: 0;
     overflow: hidden;
-    border-bottom: 1px solid rgba(255,255,255,.5);
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
 }
 
-header nav ul li .children li a {
-    display: block;
+nav li:hover > ul > li {
+    max-height: 500px;
+    overflow: visible;
 }
 
-header nav ul li .children li a span {
-    float: right;
-    position: relative;
-    top: 3px;
-    margin-right: 0;
-    margin-left: 10px;
-}
-
-header nav ul li .caret {
-    position: relative;
-    top: 3px;
-    margin-left: 10px;
-    margin-right: 0;
-}
-
-@media screen and (max-width: 800px) {
-    body {
-        padding-top: 80px;
-    }
-    .menuBar {
-        display: block;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        background:#3E3939;
-    }
-    .menuBar .bt-menu {
-        display: block;
-        padding: 20px;
-        color: white;
-        overflow: hidden;
-        font-size: 25px;
-        font-weight: bold;
-        text-decoration: none;  
-    }
-    .menuBar span {
-        float: right;
-        font-size: 40px;
-    }
-    header nav {
-        width: 80%;
-        position: fixed;
-        right: 100%;
-        margin: 0;
-        overflow: scroll;
-        height: calc(100% - 80px);
-    }
-    header nav ul li {
-        display: block;
-        border-bottom: 1px solid rgba(255,255,255,.5);
-    }
-    header nav ul li a {
-        display: block;
-    }
-
-    header nav ul li:hover .children {
-        display: none;
-    }
-
-    header nav ul li .children {
-        width: 100%;
-        position: relative;
-    } 
-    header nav ul li .children li a {
-        margin-left: 20px;
-    }
-    header nav ul li a .caret
-
+.menu ul ul {
+    top: 100%;
 }
 
 
@@ -163,113 +99,168 @@ header nav ul li .caret {
     flex-direction: row;
     flex-flow: wrap;
     justify-items: flex-end;
+    
+
+}
+
+.pokemonList{
+
+    /* Flex */
+    display: flex;
+    margin: 10px;
+    align-content: center;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#listaDePokemones div {
+    flex: 0 0 100px;
+    padding: 20px 0;
+    text-align: center;
+    background: white;
+}
+
+.namepk {
+    border: white;
+    border-bottom: white;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 /* Botones */
 
 .botonAccion {
-    height: 35px;
-    width: 120px;
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
-    display: inline-block;
-    margin: 20px;
+    height:30px;
+    width: 1000px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin: 10px;
     padding: 10px 0px;
+    /*Flex*/display: flex;
+    justify-content: stretch;
+    align-content: stretch;
+    align-items: stretch;
 }
 
-
 .water {
-    background-image: url("https://attachment.outlook.live.net/owa/lucero_dn@hotmail.es/service.svc/s/GetAttachmentThumbnail?id=AQMkADAwATM0MDAAMS1hYzEyLTk3YWQtMDACLTAwCgBGAAADUi9JFTayIU%2BdexzdiVFrcQcAZHr6IXsDJEKNh9KHEDAiSQAAAgEMAAAA6yOpHmmc9kKeBwl2NaXxwQAB3DZ58QAAAAESABAALbZPqKKbFk6La4s3DmhbUQ%3D%3D&thumbnailType=2&owa=outlook.live.com&scriptVer=2019021801.07&isc=1&X-OWA-CANARY=oYf6VK9glkS0_Qt8ME2zWCC7R1VUnNYY7v8WGiGxSW0CCnOJ1PTV0F0zdq-0HnWrPWfv_nyF54M.&token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjA2MDBGOUY2NzQ2MjA3MzdFNzM0MDRFMjg3QzQ1QTgxOENCN0NFQjgiLCJ4NXQiOiJCZ0Q1OW5SaUJ6Zm5OQVRpaDhSYWdZeTN6cmciLCJ0eXAiOiJKV1QifQ.eyJ2ZXIiOiJFeGNoYW5nZS5DYWxsYmFjay5WMSIsImFwcGN0eHNlbmRlciI6Ik93YURvd25sb2FkQDg0ZGY5ZTdmLWU5ZjYtNDBhZi1iNDM1LWFhYWFhYWFhYWFhYSIsImFwcGN0eCI6IntcIm1zZXhjaHByb3RcIjpcIm93YVwiLFwicHJpbWFyeXNpZFwiOlwiUy0xLTI4MjctMjEyOTkzLTI4ODY4OTk2MjlcIixcInB1aWRcIjpcIjkxNDgwMDg1NjE3NjU1N1wiLFwib2lkXCI6XCIwMDAzNDAwMS1hYzEyLTk3YWQtMDAwMC0wMDAwMDAwMDAwMDBcIixcInNjb3BlXCI6XCJPd2FEb3dubG9hZFwifSIsIm5iZiI6MTU1MTIzMTQwNywiZXhwIjoxNTUxMjMyMDA3LCJpc3MiOiIwMDAwMDAwMi0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDBAODRkZjllN2YtZTlmNi00MGFmLWI0MzUtYWFhYWFhYWFhYWFhIiwiYXVkIjoiMDAwMDAwMDItMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwL2F0dGFjaG1lbnQub3V0bG9vay5saXZlLm5ldEA4NGRmOWU3Zi1lOWY2LTQwYWYtYjQzNS1hYWFhYWFhYWFhYWEifQ.FiqdZLLj1-0gT7ss2lLvCadr2pdYWNlO3Mivz8_6WCsGOlm513ncMYZpfTL02wJOws0K4LUFzTT7_-k0iiRppCcylLeKDTr8cFd9QQ3X3VYHuC7Ln0pI_CGC2qEQBf70dQYZQooLrQVgsYqHzMFq9mFLPz5Jk5AI2NZxTzP6eptuLBPFYYb2y0PrBr5z-x-BYlGlCSMNZKsmRcClpY1N8lWnP9jvdhcaP4woMRioe088lq0cTpiXotFFB0bJWN3tXiQHmU2e7bnIUgyz9hRJtkoDvcOd4DremE9Vx_ulUHY7g81RsEsPHkUvPxmuNeScgUROnuAsZQi5H9vywd3T7Q&animation=true");
+    background-image: url("../src/img/pkm__0005_Group-2.png");
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 .grass {
-    background-image: url("https://attachment.outlook.live.net/owa/lucero_dn@hotmail.es/service.svc/s/GetAttachmentThumbnail?id=AQMkADAwATM0MDAAMS1hYzEyLTk3YWQtMDACLTAwCgBGAAADUi9JFTayIU%2BdexzdiVFrcQcAZHr6IXsDJEKNh9KHEDAiSQAAAgEMAAAA6yOpHmmc9kKeBwl2NaXxwQAB3DZ58QAAAAESABAAca0cAanjKEGqUsOyuoGDlA%3D%3D&thumbnailType=2&owa=outlook.live.com&scriptVer=2019021801.07&isc=1&X-OWA-CANARY=itaOfWYVB0SyTh5PuPiko-Cs7BCNmtYYwPQsW77i9qto9iPa2A6K6s8NPl6FfPjppDmISwj2n28.&token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjA2MDBGOUY2NzQ2MjA3MzdFNzM0MDRFMjg3QzQ1QTgxOENCN0NFQjgiLCJ4NXQiOiJCZ0Q1OW5SaUJ6Zm5OQVRpaDhSYWdZeTN6cmciLCJ0eXAiOiJKV1QifQ.eyJ2ZXIiOiJFeGNoYW5nZS5DYWxsYmFjay5WMSIsImFwcGN0eHNlbmRlciI6Ik93YURvd25sb2FkQDg0ZGY5ZTdmLWU5ZjYtNDBhZi1iNDM1LWFhYWFhYWFhYWFhYSIsImFwcGN0eCI6IntcIm1zZXhjaHByb3RcIjpcIm93YVwiLFwicHJpbWFyeXNpZFwiOlwiUy0xLTI4MjctMjEyOTkzLTI4ODY4OTk2MjlcIixcInB1aWRcIjpcIjkxNDgwMDg1NjE3NjU1N1wiLFwib2lkXCI6XCIwMDAzNDAwMS1hYzEyLTk3YWQtMDAwMC0wMDAwMDAwMDAwMDBcIixcInNjb3BlXCI6XCJPd2FEb3dubG9hZFwifSIsIm5iZiI6MTU1MTAzNTcxNywiZXhwIjoxNTUxMDM2MzE3LCJpc3MiOiIwMDAwMDAwMi0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDBAODRkZjllN2YtZTlmNi00MGFmLWI0MzUtYWFhYWFhYWFhYWFhIiwiYXVkIjoiMDAwMDAwMDItMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwL2F0dGFjaG1lbnQub3V0bG9vay5saXZlLm5ldEA4NGRmOWU3Zi1lOWY2LTQwYWYtYjQzNS1hYWFhYWFhYWFhYWEifQ.A1X19kgUDUqQAC6F3iI8gP8wlumt2DieRwD2oBQHiSmXreK6b2G8v9u6jFTJGZ-ntk-DDM-jY4ssuR-uuWLDN8SYcjRkSMpJsyICBoJQDhOGqnBU3WqXqeFVFtV7k3y5PcbK8NnNfZ6dzRJehQtyMOHimOyULtXbswPtMagvge44t5g21HTTSlDqoVB4N1GAbM04IrSKF0gSf3jjo07Fzp5W6CMZrpk7HeeqDwvtHMoCOfTocS0VWSGltnbGkGQcWe2alDLshsikDAtHIm8h4vLSFRxMbW1M2FsJoUVQx0IkSoVyfjG19fHsA2cbDG-M2FDzcvJ80mMJZq79iIiUxA&animation=true");
+    background-image: url("../src/img/pkm__0006_Group-2.png");
     background-repeat: no-repeat;
     background-size: 100%
     
 }
 
 .fire {
-    background-image: url("https://attachment.outlook.live.net/owa/lucero_dn@hotmail.es/service.svc/s/GetAttachmentThumbnail?id=AQMkADAwATM0MDAAMS1hYzEyLTk3YWQtMDACLTAwCgBGAAADUi9JFTayIU%2BdexzdiVFrcQcAZHr6IXsDJEKNh9KHEDAiSQAAAgEMAAAA6yOpHmmc9kKeBwl2NaXxwQAB3DZ58QAAAAESABAAVzj3czt%2Fa0imwsw5UzIUfw%3D%3D&thumbnailType=2&owa=outlook.live.com&scriptVer=2019021801.07&isc=1&X-OWA-CANARY=RdX6wZ6FOUyG8Mjj9-ZFrFBvR4ONmtYYqDXVVAONGavFpyWwT1iJRqzR7k9BNdWWnNqk2DixKRE.&token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjA2MDBGOUY2NzQ2MjA3MzdFNzM0MDRFMjg3QzQ1QTgxOENCN0NFQjgiLCJ4NXQiOiJCZ0Q1OW5SaUJ6Zm5OQVRpaDhSYWdZeTN6cmciLCJ0eXAiOiJKV1QifQ.eyJ2ZXIiOiJFeGNoYW5nZS5DYWxsYmFjay5WMSIsImFwcGN0eHNlbmRlciI6Ik93YURvd25sb2FkQDg0ZGY5ZTdmLWU5ZjYtNDBhZi1iNDM1LWFhYWFhYWFhYWFhYSIsImFwcGN0eCI6IntcIm1zZXhjaHByb3RcIjpcIm93YVwiLFwicHJpbWFyeXNpZFwiOlwiUy0xLTI4MjctMjEyOTkzLTI4ODY4OTk2MjlcIixcInB1aWRcIjpcIjkxNDgwMDg1NjE3NjU1N1wiLFwib2lkXCI6XCIwMDAzNDAwMS1hYzEyLTk3YWQtMDAwMC0wMDAwMDAwMDAwMDBcIixcInNjb3BlXCI6XCJPd2FEb3dubG9hZFwifSIsIm5iZiI6MTU1MTAzNjA3NSwiZXhwIjoxNTUxMDM2Njc1LCJpc3MiOiIwMDAwMDAwMi0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDBAODRkZjllN2YtZTlmNi00MGFmLWI0MzUtYWFhYWFhYWFhYWFhIiwiYXVkIjoiMDAwMDAwMDItMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwL2F0dGFjaG1lbnQub3V0bG9vay5saXZlLm5ldEA4NGRmOWU3Zi1lOWY2LTQwYWYtYjQzNS1hYWFhYWFhYWFhYWEifQ.DUCG2xCXJCoopeZpns_zLGzZPAzIYw-DhhOG7E54Ek1Cca5jr-d8JNMqOBjgHm3vePMBReMLwBsfQXVrVaEPQaS_K2Hxllvwvc8Sl21D2oaSYxxL9wrbByE_TeR3spXr3iGcoo6LXtTSV526DtHCkjCQN0MGM4cSj6PrfvXu6dcRkNW2sAYBRnhsw9zIsZ9jtQT4G6hdVjWIYAupFdirFFACmF02vdq3_SUjzKkP_W5oE3sY64-1SX80U515f4VPT0dUZUb073xbcLSRVpBDMiGMYh_9Gv-MY162SUiiN0vgLk-D0QSAGyMw5FO-7_CerEa1pcE-vpdWVYUdFTvo9A&animation=true");
+    background-image: url("../src/img/pkm__0000_Group-2.png");
     background-repeat: no-repeat;
     background-size: 100%;
     
 }
 
 .flying {
-    background-image: url("https://attachment.outlook.live.net/owa/lucero_dn@hotmail.es/service.svc/s/GetAttachmentThumbnail?id=AQMkADAwATM0MDAAMS1hYzEyLTk3YWQtMDACLTAwCgBGAAADUi9JFTayIU%2BdexzdiVFrcQcAZHr6IXsDJEKNh9KHEDAiSQAAAgEMAAAA6yOpHmmc9kKeBwl2NaXxwQAB3DZ59AAAAAESABAAh6lcJZgXW0%2Bmo%2BBBxzg8%2FA%3D%3D&thumbnailType=2&owa=outlook.live.com&scriptVer=2019021801.07&isc=1&X-OWA-CANARY=VttLZtbzuUCl8CFnPMi01DBZQV2WmtYYkWrYQfuF2DI8DZ8VxxvwT-8LZUrbwoQ6kUD-o70MIOc.&token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjA2MDBGOUY2NzQ2MjA3MzdFNzM0MDRFMjg3QzQ1QTgxOENCN0NFQjgiLCJ4NXQiOiJCZ0Q1OW5SaUJ6Zm5OQVRpaDhSYWdZeTN6cmciLCJ0eXAiOiJKV1QifQ.eyJ2ZXIiOiJFeGNoYW5nZS5DYWxsYmFjay5WMSIsImFwcGN0eHNlbmRlciI6Ik93YURvd25sb2FkQDg0ZGY5ZTdmLWU5ZjYtNDBhZi1iNDM1LWFhYWFhYWFhYWFhYSIsImFwcGN0eCI6IntcIm1zZXhjaHByb3RcIjpcIm93YVwiLFwicHJpbWFyeXNpZFwiOlwiUy0xLTI4MjctMjEyOTkzLTI4ODY4OTk2MjlcIixcInB1aWRcIjpcIjkxNDgwMDg1NjE3NjU1N1wiLFwib2lkXCI6XCIwMDAzNDAwMS1hYzEyLTk3YWQtMDAwMC0wMDAwMDAwMDAwMDBcIixcInNjb3BlXCI6XCJPd2FEb3dubG9hZFwifSIsIm5iZiI6MTU1MTAzOTk3OSwiZXhwIjoxNTUxMDQwNTc5LCJpc3MiOiIwMDAwMDAwMi0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDBAODRkZjllN2YtZTlmNi00MGFmLWI0MzUtYWFhYWFhYWFhYWFhIiwiYXVkIjoiMDAwMDAwMDItMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwL2F0dGFjaG1lbnQub3V0bG9vay5saXZlLm5ldEA4NGRmOWU3Zi1lOWY2LTQwYWYtYjQzNS1hYWFhYWFhYWFhYWEifQ.OVMGA6ox3JQ7USo7LRYe2Auw7AYufhkfOpapkkd1gRLLiIQ0f8lDszmQJ6htK6aRfjFbS1f1SpXEIiRWZ9jhWf80cyJnvdEBjH8tu8fVdEDFGxf5SyIIu4I3rhJRlckGeMr-GzwhlHlyykFx_R-YocharCSWbWuNthuvq1JK-gxnDolgs5JHxuo94bIchKp7LPxMfN36xmVUVlpi7EGDZfTTGJhvFZC5Pc4NUniii7KwSoU5fr_vnwmfxcAKRk69FFvyTDJkT-WSk8LiEGCMoeNcV7OFgNN2ocxuCUhYvp8Mcb5NJsCHlt3vKDvsnQ6rxN5QPwygQF4eqJFvIl2qEQ&animation=true");
+    background-image: url("../src/img/pkm__0015_Group-2.png");
     background-repeat: no-repeat;
     background-size: 100%;
 
 }
 
 .bug {
-    background-image: url("https://attachment.outlook.live.net/owa/lucero_dn@hotmail.es/service.svc/s/GetAttachmentThumbnail?id=AQMkADAwATM0MDAAMS1hYzEyLTk3YWQtMDACLTAwCgBGAAADUi9JFTayIU%2BdexzdiVFrcQcAZHr6IXsDJEKNh9KHEDAiSQAAAgEMAAAA6yOpHmmc9kKeBwl2NaXxwQAB3DZ58QAAAAESABAAifEj3L%2FtfkWhPbgqiQGrLQ%3D%3D&thumbnailType=2&owa=outlook.live.com&scriptVer=2019021801.07&isc=1&X-OWA-CANARY=p1qgZmyPnUGPiF1Di-JI_yAqvBeOmtYY3xgbDYVkhGson_SaLBI6fHmIGgZeaufcgRUfnHJraJ8.&token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjA2MDBGOUY2NzQ2MjA3MzdFNzM0MDRFMjg3QzQ1QTgxOENCN0NFQjgiLCJ4NXQiOiJCZ0Q1OW5SaUJ6Zm5OQVRpaDhSYWdZeTN6cmciLCJ0eXAiOiJKV1QifQ.eyJ2ZXIiOiJFeGNoYW5nZS5DYWxsYmFjay5WMSIsImFwcGN0eHNlbmRlciI6Ik93YURvd25sb2FkQDg0ZGY5ZTdmLWU5ZjYtNDBhZi1iNDM1LWFhYWFhYWFhYWFhYSIsImFwcGN0eCI6IntcIm1zZXhjaHByb3RcIjpcIm93YVwiLFwicHJpbWFyeXNpZFwiOlwiUy0xLTI4MjctMjEyOTkzLTI4ODY4OTk2MjlcIixcInB1aWRcIjpcIjkxNDgwMDg1NjE3NjU1N1wiLFwib2lkXCI6XCIwMDAzNDAwMS1hYzEyLTk3YWQtMDAwMC0wMDAwMDAwMDAwMDBcIixcInNjb3BlXCI6XCJPd2FEb3dubG9hZFwifSIsIm5iZiI6MTU1MTAzNjM4MCwiZXhwIjoxNTUxMDM2OTgwLCJpc3MiOiIwMDAwMDAwMi0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDBAODRkZjllN2YtZTlmNi00MGFmLWI0MzUtYWFhYWFhYWFhYWFhIiwiYXVkIjoiMDAwMDAwMDItMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwL2F0dGFjaG1lbnQub3V0bG9vay5saXZlLm5ldEA4NGRmOWU3Zi1lOWY2LTQwYWYtYjQzNS1hYWFhYWFhYWFhYWEifQ.nS0f93fVO-xz3_oMpC54uxXwD8CEtOq8LvO_L93U1CIQ-SMWoQek-ZoxoSycZjlPUh9YVCJl2VJneR9E-1-hw8KOjKdullTckZeEuQ3ehYBjzM6DudXODl0jIGTGLv8jyu-MdpyMCJn8vNgZghiEUKlyDx7zIYGj2MKFALIf3Z5I6mza8Ie11JP90OTuO3CYXRo0nDGVrLCB75mdHody0g87icYPCAfQ6FUT8HW9T22ywOeRVZkvENUIff4gxzC7PLiI69BQsKuhG8BBz2g78X4q0zXWRaBeURzEB3-xWkoEwKvyXxjXJhD9-JKfSOGYlUuElU2sxuFqggrB_-G7kQ&animation=true");
+    background-image: url("../src/img/pkm__0014_Group-2.png");
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 .normal{
-    background-image: url("https://attachment.outlook.live.net/owa/lucero_dn@hotmail.es/service.svc/s/GetAttachmentThumbnail?id=AQMkADAwATM0MDAAMS1hYzEyLTk3YWQtMDACLTAwCgBGAAADUi9JFTayIU%2BdexzdiVFrcQcAZHr6IXsDJEKNh9KHEDAiSQAAAgEMAAAA6yOpHmmc9kKeBwl2NaXxwQAB3DZ58QAAAAESABAA2lswG%2BwmvUuvT31XeY%2F9Bw%3D%3D&thumbnailType=2&owa=outlook.live.com&scriptVer=2019021801.07&isc=1&X-OWA-CANARY=_jUK6QlJ7UyWcYq-mY12pvDbuxeOmtYYinCday0K3INCvFD5lKJic_Fym_y5lvBzdAAurBw9KBA.&token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjA2MDBGOUY2NzQ2MjA3MzdFNzM0MDRFMjg3QzQ1QTgxOENCN0NFQjgiLCJ4NXQiOiJCZ0Q1OW5SaUJ6Zm5OQVRpaDhSYWdZeTN6cmciLCJ0eXAiOiJKV1QifQ.eyJ2ZXIiOiJFeGNoYW5nZS5DYWxsYmFjay5WMSIsImFwcGN0eHNlbmRlciI6Ik93YURvd25sb2FkQDg0ZGY5ZTdmLWU5ZjYtNDBhZi1iNDM1LWFhYWFhYWFhYWFhYSIsImFwcGN0eCI6IntcIm1zZXhjaHByb3RcIjpcIm93YVwiLFwicHJpbWFyeXNpZFwiOlwiUy0xLTI4MjctMjEyOTkzLTI4ODY4OTk2MjlcIixcInB1aWRcIjpcIjkxNDgwMDg1NjE3NjU1N1wiLFwib2lkXCI6XCIwMDAzNDAwMS1hYzEyLTk3YWQtMDAwMC0wMDAwMDAwMDAwMDBcIixcInNjb3BlXCI6XCJPd2FEb3dubG9hZFwifSIsIm5iZiI6MTU1MTAzNjM4MCwiZXhwIjoxNTUxMDM2OTgwLCJpc3MiOiIwMDAwMDAwMi0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDBAODRkZjllN2YtZTlmNi00MGFmLWI0MzUtYWFhYWFhYWFhYWFhIiwiYXVkIjoiMDAwMDAwMDItMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwL2F0dGFjaG1lbnQub3V0bG9vay5saXZlLm5ldEA4NGRmOWU3Zi1lOWY2LTQwYWYtYjQzNS1hYWFhYWFhYWFhYWEifQ.nS0f93fVO-xz3_oMpC54uxXwD8CEtOq8LvO_L93U1CIQ-SMWoQek-ZoxoSycZjlPUh9YVCJl2VJneR9E-1-hw8KOjKdullTckZeEuQ3ehYBjzM6DudXODl0jIGTGLv8jyu-MdpyMCJn8vNgZghiEUKlyDx7zIYGj2MKFALIf3Z5I6mza8Ie11JP90OTuO3CYXRo0nDGVrLCB75mdHody0g87icYPCAfQ6FUT8HW9T22ywOeRVZkvENUIff4gxzC7PLiI69BQsKuhG8BBz2g78X4q0zXWRaBeURzEB3-xWkoEwKvyXxjXJhD9-JKfSOGYlUuElU2sxuFqggrB_-G7kQ&animation=true");
+    background-image: url("../src/img/pkm__0009_Group-2.png");
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 .poison {
-    background-image: url("https://attachment.outlook.live.net/owa/lucero_dn@hotmail.es/service.svc/s/GetAttachmentThumbnail?id=AQMkADAwATM0MDAAMS1hYzEyLTk3YWQtMDACLTAwCgBGAAADUi9JFTayIU%2BdexzdiVFrcQcAZHr6IXsDJEKNh9KHEDAiSQAAAgEMAAAA6yOpHmmc9kKeBwl2NaXxwQAB3DZ58QAAAAESABAABI4ysOm2bkmrNCek%2BdFJhA%3D%3D&thumbnailType=2&owa=outlook.live.com&scriptVer=2019021801.07&isc=1&X-OWA-CANARY=_jUK6QlJ7UyWcYq-mY12pvDbuxeOmtYYinCday0K3INCvFD5lKJic_Fym_y5lvBzdAAurBw9KBA.&token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjA2MDBGOUY2NzQ2MjA3MzdFNzM0MDRFMjg3QzQ1QTgxOENCN0NFQjgiLCJ4NXQiOiJCZ0Q1OW5SaUJ6Zm5OQVRpaDhSYWdZeTN6cmciLCJ0eXAiOiJKV1QifQ.eyJ2ZXIiOiJFeGNoYW5nZS5DYWxsYmFjay5WMSIsImFwcGN0eHNlbmRlciI6Ik93YURvd25sb2FkQDg0ZGY5ZTdmLWU5ZjYtNDBhZi1iNDM1LWFhYWFhYWFhYWFhYSIsImFwcGN0eCI6IntcIm1zZXhjaHByb3RcIjpcIm93YVwiLFwicHJpbWFyeXNpZFwiOlwiUy0xLTI4MjctMjEyOTkzLTI4ODY4OTk2MjlcIixcInB1aWRcIjpcIjkxNDgwMDg1NjE3NjU1N1wiLFwib2lkXCI6XCIwMDAzNDAwMS1hYzEyLTk3YWQtMDAwMC0wMDAwMDAwMDAwMDBcIixcInNjb3BlXCI6XCJPd2FEb3dubG9hZFwifSIsIm5iZiI6MTU1MTAzNjM4MCwiZXhwIjoxNTUxMDM2OTgwLCJpc3MiOiIwMDAwMDAwMi0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDBAODRkZjllN2YtZTlmNi00MGFmLWI0MzUtYWFhYWFhYWFhYWFhIiwiYXVkIjoiMDAwMDAwMDItMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwL2F0dGFjaG1lbnQub3V0bG9vay5saXZlLm5ldEA4NGRmOWU3Zi1lOWY2LTQwYWYtYjQzNS1hYWFhYWFhYWFhYWEifQ.nS0f93fVO-xz3_oMpC54uxXwD8CEtOq8LvO_L93U1CIQ-SMWoQek-ZoxoSycZjlPUh9YVCJl2VJneR9E-1-hw8KOjKdullTckZeEuQ3ehYBjzM6DudXODl0jIGTGLv8jyu-MdpyMCJn8vNgZghiEUKlyDx7zIYGj2MKFALIf3Z5I6mza8Ie11JP90OTuO3CYXRo0nDGVrLCB75mdHody0g87icYPCAfQ6FUT8HW9T22ywOeRVZkvENUIff4gxzC7PLiI69BQsKuhG8BBz2g78X4q0zXWRaBeURzEB3-xWkoEwKvyXxjXJhD9-JKfSOGYlUuElU2sxuFqggrB_-G7kQ&animation=true");
+    background-image: url("../src/img/pkm__0007_Group-2.png");
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 .electric {
-    background-image: url("https://attachment.outlook.live.net/owa/lucero_dn@hotmail.es/service.svc/s/GetAttachmentThumbnail?id=AQMkADAwATM0MDAAMS1hYzEyLTk3YWQtMDACLTAwCgBGAAADUi9JFTayIU%2BdexzdiVFrcQcAZHr6IXsDJEKNh9KHEDAiSQAAAgEMAAAA6yOpHmmc9kKeBwl2NaXxwQAB3DZ58QAAAAESABAAmPqCR1C3zkOAT39zncpIhw%3D%3D&thumbnailType=2&owa=outlook.live.com&scriptVer=2019021801.07&isc=1&X-OWA-CANARY=uL7Izhp220y8l08Xsr7bKgBcKaeOmtYY5o-JTIayZXyGlMh2jVWd0X4-D1WduPrxP7ZT3Bj4X14.&token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjA2MDBGOUY2NzQ2MjA3MzdFNzM0MDRFMjg3QzQ1QTgxOENCN0NFQjgiLCJ4NXQiOiJCZ0Q1OW5SaUJ6Zm5OQVRpaDhSYWdZeTN6cmciLCJ0eXAiOiJKV1QifQ.eyJ2ZXIiOiJFeGNoYW5nZS5DYWxsYmFjay5WMSIsImFwcGN0eHNlbmRlciI6Ik93YURvd25sb2FkQDg0ZGY5ZTdmLWU5ZjYtNDBhZi1iNDM1LWFhYWFhYWFhYWFhYSIsImFwcGN0eCI6IntcIm1zZXhjaHByb3RcIjpcIm93YVwiLFwicHJpbWFyeXNpZFwiOlwiUy0xLTI4MjctMjEyOTkzLTI4ODY4OTk2MjlcIixcInB1aWRcIjpcIjkxNDgwMDg1NjE3NjU1N1wiLFwib2lkXCI6XCIwMDAzNDAwMS1hYzEyLTk3YWQtMDAwMC0wMDAwMDAwMDAwMDBcIixcInNjb3BlXCI6XCJPd2FEb3dubG9hZFwifSIsIm5iZiI6MTU1MTAzNjY3OSwiZXhwIjoxNTUxMDM3Mjc5LCJpc3MiOiIwMDAwMDAwMi0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDBAODRkZjllN2YtZTlmNi00MGFmLWI0MzUtYWFhYWFhYWFhYWFhIiwiYXVkIjoiMDAwMDAwMDItMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwL2F0dGFjaG1lbnQub3V0bG9vay5saXZlLm5ldEA4NGRmOWU3Zi1lOWY2LTQwYWYtYjQzNS1hYWFhYWFhYWFhYWEifQ.awDhOSzmWRuTSqzMLPyNsVrlVlD4DWWIxhSkkPPNkASrKDjXU3on09aUXRSJiVvdRrhtVA0fAcDkGMN9TrwscxNSV2-aoqxhIiKDMEIcyCHZTMKxv16nG1HDunzEfwNMJ1H7_HctwR2fs1XSbEm8tTS7sf7kBgske8-6uvECET_nUUXrpnCsexx414zjOcbCjlRz2_IadsLzSlGejVUcRSBjACuQABMjVUdeIXWRKY9Tcgi3Qj8Zq8f3awkYqhQ7Adwxz86UbDVXQvsgCX1nQrJHLNcywWyswZtkZvdzG3CMgnBR1NDlpyvl6bmyFSom0rEFhfHGBLfkD5uw1xzx4A&animation=true");
+    background-image: url("../src/img/pkm__0011_Group-2.png");
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 .ground {
-    background-image: url("https://attachment.outlook.live.net/owa/lucero_dn@hotmail.es/service.svc/s/GetAttachmentThumbnail?id=AQMkADAwATM0MDAAMS1hYzEyLTk3YWQtMDACLTAwCgBGAAADUi9JFTayIU%2BdexzdiVFrcQcAZHr6IXsDJEKNh9KHEDAiSQAAAgEMAAAA6yOpHmmc9kKeBwl2NaXxwQAB3DZ58QAAAAESABAAuAFmZfmuWEeE2y0Ftp8Pjg%3D%3D&thumbnailType=2&owa=outlook.live.com&scriptVer=2019021801.07&isc=1&X-OWA-CANARY=uL7Izhp220y8l08Xsr7bKgBcKaeOmtYY5o-JTIayZXyGlMh2jVWd0X4-D1WduPrxP7ZT3Bj4X14.&token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjA2MDBGOUY2NzQ2MjA3MzdFNzM0MDRFMjg3QzQ1QTgxOENCN0NFQjgiLCJ4NXQiOiJCZ0Q1OW5SaUJ6Zm5OQVRpaDhSYWdZeTN6cmciLCJ0eXAiOiJKV1QifQ.eyJ2ZXIiOiJFeGNoYW5nZS5DYWxsYmFjay5WMSIsImFwcGN0eHNlbmRlciI6Ik93YURvd25sb2FkQDg0ZGY5ZTdmLWU5ZjYtNDBhZi1iNDM1LWFhYWFhYWFhYWFhYSIsImFwcGN0eCI6IntcIm1zZXhjaHByb3RcIjpcIm93YVwiLFwicHJpbWFyeXNpZFwiOlwiUy0xLTI4MjctMjEyOTkzLTI4ODY4OTk2MjlcIixcInB1aWRcIjpcIjkxNDgwMDg1NjE3NjU1N1wiLFwib2lkXCI6XCIwMDAzNDAwMS1hYzEyLTk3YWQtMDAwMC0wMDAwMDAwMDAwMDBcIixcInNjb3BlXCI6XCJPd2FEb3dubG9hZFwifSIsIm5iZiI6MTU1MTAzNjY3OSwiZXhwIjoxNTUxMDM3Mjc5LCJpc3MiOiIwMDAwMDAwMi0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDBAODRkZjllN2YtZTlmNi00MGFmLWI0MzUtYWFhYWFhYWFhYWFhIiwiYXVkIjoiMDAwMDAwMDItMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwL2F0dGFjaG1lbnQub3V0bG9vay5saXZlLm5ldEA4NGRmOWU3Zi1lOWY2LTQwYWYtYjQzNS1hYWFhYWFhYWFhYWEifQ.awDhOSzmWRuTSqzMLPyNsVrlVlD4DWWIxhSkkPPNkASrKDjXU3on09aUXRSJiVvdRrhtVA0fAcDkGMN9TrwscxNSV2-aoqxhIiKDMEIcyCHZTMKxv16nG1HDunzEfwNMJ1H7_HctwR2fs1XSbEm8tTS7sf7kBgske8-6uvECET_nUUXrpnCsexx414zjOcbCjlRz2_IadsLzSlGejVUcRSBjACuQABMjVUdeIXWRKY9Tcgi3Qj8Zq8f3awkYqhQ7Adwxz86UbDVXQvsgCX1nQrJHLNcywWyswZtkZvdzG3CMgnBR1NDlpyvl6bmyFSom0rEFhfHGBLfkD5uw1xzx4A&animation=true");
+    background-image: url("../src/img/pkm__0003_Group-2.png");
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 .psychic {
-    background-image: url("https://attachment.outlook.live.net/owa/lucero_dn@hotmail.es/service.svc/s/GetAttachmentThumbnail?id=AQMkADAwATM0MDAAMS1hYzEyLTk3YWQtMDACLTAwCgBGAAADUi9JFTayIU%2BdexzdiVFrcQcAZHr6IXsDJEKNh9KHEDAiSQAAAgEMAAAA6yOpHmmc9kKeBwl2NaXxwQAB3DZ58QAAAAESABAA3xUMZa1a6UKJyxVVK0LMDg%3D%3D&thumbnailType=2&owa=outlook.live.com&scriptVer=2019021801.07&isc=1&X-OWA-CANARY=uL7Izhp220y8l08Xsr7bKgBcKaeOmtYY5o-JTIayZXyGlMh2jVWd0X4-D1WduPrxP7ZT3Bj4X14.&token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjA2MDBGOUY2NzQ2MjA3MzdFNzM0MDRFMjg3QzQ1QTgxOENCN0NFQjgiLCJ4NXQiOiJCZ0Q1OW5SaUJ6Zm5OQVRpaDhSYWdZeTN6cmciLCJ0eXAiOiJKV1QifQ.eyJ2ZXIiOiJFeGNoYW5nZS5DYWxsYmFjay5WMSIsImFwcGN0eHNlbmRlciI6Ik93YURvd25sb2FkQDg0ZGY5ZTdmLWU5ZjYtNDBhZi1iNDM1LWFhYWFhYWFhYWFhYSIsImFwcGN0eCI6IntcIm1zZXhjaHByb3RcIjpcIm93YVwiLFwicHJpbWFyeXNpZFwiOlwiUy0xLTI4MjctMjEyOTkzLTI4ODY4OTk2MjlcIixcInB1aWRcIjpcIjkxNDgwMDg1NjE3NjU1N1wiLFwib2lkXCI6XCIwMDAzNDAwMS1hYzEyLTk3YWQtMDAwMC0wMDAwMDAwMDAwMDBcIixcInNjb3BlXCI6XCJPd2FEb3dubG9hZFwifSIsIm5iZiI6MTU1MTAzNjY3OSwiZXhwIjoxNTUxMDM3Mjc5LCJpc3MiOiIwMDAwMDAwMi0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDBAODRkZjllN2YtZTlmNi00MGFmLWI0MzUtYWFhYWFhYWFhYWFhIiwiYXVkIjoiMDAwMDAwMDItMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwL2F0dGFjaG1lbnQub3V0bG9vay5saXZlLm5ldEA4NGRmOWU3Zi1lOWY2LTQwYWYtYjQzNS1hYWFhYWFhYWFhYWEifQ.awDhOSzmWRuTSqzMLPyNsVrlVlD4DWWIxhSkkPPNkASrKDjXU3on09aUXRSJiVvdRrhtVA0fAcDkGMN9TrwscxNSV2-aoqxhIiKDMEIcyCHZTMKxv16nG1HDunzEfwNMJ1H7_HctwR2fs1XSbEm8tTS7sf7kBgske8-6uvECET_nUUXrpnCsexx414zjOcbCjlRz2_IadsLzSlGejVUcRSBjACuQABMjVUdeIXWRKY9Tcgi3Qj8Zq8f3awkYqhQ7Adwxz86UbDVXQvsgCX1nQrJHLNcywWyswZtkZvdzG3CMgnBR1NDlpyvl6bmyFSom0rEFhfHGBLfkD5uw1xzx4A&animation=true");
+    background-image: url("../src/img/pkm__0001_Group-2.png");
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 .fighting {
-    background-image: url("https://attachment.outlook.live.net/owa/lucero_dn@hotmail.es/service.svc/s/GetAttachmentThumbnail?id=AQMkADAwATM0MDAAMS1hYzEyLTk3YWQtMDACLTAwCgBGAAADUi9JFTayIU%2BdexzdiVFrcQcAZHr6IXsDJEKNh9KHEDAiSQAAAgEMAAAA6yOpHmmc9kKeBwl2NaXxwQAB3DZ58QAAAAESABAAerfWZC32rkmxDYuh%2FyD42Q%3D%3D&thumbnailType=2&owa=outlook.live.com&scriptVer=2019021801.07&isc=1&X-OWA-CANARY=Ev3FKf5hvk-IzwJqphu9WrB0f-OQmtYYxa8Ban5HN04bBDcwPijvKoO8Dn2dCRjLd5Hwv7IRt7Q.&token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjA2MDBGOUY2NzQ2MjA3MzdFNzM0MDRFMjg3QzQ1QTgxOENCN0NFQjgiLCJ4NXQiOiJCZ0Q1OW5SaUJ6Zm5OQVRpaDhSYWdZeTN6cmciLCJ0eXAiOiJKV1QifQ.eyJ2ZXIiOiJFeGNoYW5nZS5DYWxsYmFjay5WMSIsImFwcGN0eHNlbmRlciI6Ik93YURvd25sb2FkQDg0ZGY5ZTdmLWU5ZjYtNDBhZi1iNDM1LWFhYWFhYWFhYWFhYSIsImFwcGN0eCI6IntcIm1zZXhjaHByb3RcIjpcIm93YVwiLFwicHJpbWFyeXNpZFwiOlwiUy0xLTI4MjctMjEyOTkzLTI4ODY4OTk2MjlcIixcInB1aWRcIjpcIjkxNDgwMDg1NjE3NjU1N1wiLFwib2lkXCI6XCIwMDAzNDAwMS1hYzEyLTk3YWQtMDAwMC0wMDAwMDAwMDAwMDBcIixcInNjb3BlXCI6XCJPd2FEb3dubG9hZFwifSIsIm5iZiI6MTU1MTAzNzU4MCwiZXhwIjoxNTUxMDM4MTgwLCJpc3MiOiIwMDAwMDAwMi0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDBAODRkZjllN2YtZTlmNi00MGFmLWI0MzUtYWFhYWFhYWFhYWFhIiwiYXVkIjoiMDAwMDAwMDItMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwL2F0dGFjaG1lbnQub3V0bG9vay5saXZlLm5ldEA4NGRmOWU3Zi1lOWY2LTQwYWYtYjQzNS1hYWFhYWFhYWFhYWEifQ.i77F1hr262AutEIkE8-X-6F_5kkiwwLx-heXz7FYkVltfZo1Wr-5Rem5hR-7gCHlG0Ms1_T6UjUfaVFTSPjmW13T1adGJku4ga_HDTm_w3udKBfRvKyIvAJ_li6MsxxTAy1zuU5SlC3kZOmkvL7rO1-Jzc7ZZt77QSuZxyul5H2zZI7dajGfEDVHVlrT5ItjV9-fiNmAEjPmlIVNIArW_7ErxLcoYpZKddkqPyEFP1_TpOfl7mi3JWGLZwUKuA4bN9lGGNp5H-p7_bYrgDazzEBhA4kOeLDSCPEcLH_1MKcXV7w55Q8PUJ0R4zJJocU0QYSxEKmlCxXzJ4I8oT3DVA&animation=true");
+    background-image: url("../src/img/pkm__0008_Group-2.png");
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 .rock {
-    background-image: url("https://attachment.outlook.live.net/owa/lucero_dn@hotmail.es/service.svc/s/GetAttachmentThumbnail?id=AQMkADAwATM0MDAAMS1hYzEyLTk3YWQtMDACLTAwCgBGAAADUi9JFTayIU%2BdexzdiVFrcQcAZHr6IXsDJEKNh9KHEDAiSQAAAgEMAAAA6yOpHmmc9kKeBwl2NaXxwQAB3DZ59AAAAAESABAAkXRym4VbG0eT4Xh8%2F5CJCw%3D%3D&thumbnailType=2&owa=outlook.live.com&scriptVer=2019021801.07&isc=1&X-OWA-CANARY=2cpmJF12ikKGKpOIMLRqQoD_elyWmtYY9zWzl0grtMjnM-J4JDx4tvtaprSkFRKvSdMUTO-iwsI.&token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjA2MDBGOUY2NzQ2MjA3MzdFNzM0MDRFMjg3QzQ1QTgxOENCN0NFQjgiLCJ4NXQiOiJCZ0Q1OW5SaUJ6Zm5OQVRpaDhSYWdZeTN6cmciLCJ0eXAiOiJKV1QifQ.eyJ2ZXIiOiJFeGNoYW5nZS5DYWxsYmFjay5WMSIsImFwcGN0eHNlbmRlciI6Ik93YURvd25sb2FkQDg0ZGY5ZTdmLWU5ZjYtNDBhZi1iNDM1LWFhYWFhYWFhYWFhYSIsImFwcGN0eCI6IntcIm1zZXhjaHByb3RcIjpcIm93YVwiLFwicHJpbWFyeXNpZFwiOlwiUy0xLTI4MjctMjEyOTkzLTI4ODY4OTk2MjlcIixcInB1aWRcIjpcIjkxNDgwMDg1NjE3NjU1N1wiLFwib2lkXCI6XCIwMDAzNDAwMS1hYzEyLTk3YWQtMDAwMC0wMDAwMDAwMDAwMDBcIixcInNjb3BlXCI6XCJPd2FEb3dubG9hZFwifSIsIm5iZiI6MTU1MTAzOTk3OSwiZXhwIjoxNTUxMDQwNTc5LCJpc3MiOiIwMDAwMDAwMi0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDBAODRkZjllN2YtZTlmNi00MGFmLWI0MzUtYWFhYWFhYWFhYWFhIiwiYXVkIjoiMDAwMDAwMDItMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwL2F0dGFjaG1lbnQub3V0bG9vay5saXZlLm5ldEA4NGRmOWU3Zi1lOWY2LTQwYWYtYjQzNS1hYWFhYWFhYWFhYWEifQ.OVMGA6ox3JQ7USo7LRYe2Auw7AYufhkfOpapkkd1gRLLiIQ0f8lDszmQJ6htK6aRfjFbS1f1SpXEIiRWZ9jhWf80cyJnvdEBjH8tu8fVdEDFGxf5SyIIu4I3rhJRlckGeMr-GzwhlHlyykFx_R-YocharCSWbWuNthuvq1JK-gxnDolgs5JHxuo94bIchKp7LPxMfN36xmVUVlpi7EGDZfTTGJhvFZC5Pc4NUniii7KwSoU5fr_vnwmfxcAKRk69FFvyTDJkT-WSk8LiEGCMoeNcV7OFgNN2ocxuCUhYvp8Mcb5NJsCHlt3vKDvsnQ6rxN5QPwygQF4eqJFvIl2qEQ&animation=true");
+    background-image: url("../src/img/pkm__0008_Group-2.png");
     background-repeat: no-repeat;
     background-size: 100%;
 }
  
 .ice {
-    background-image: url("https://attachment.outlook.live.net/owa/lucero_dn@hotmail.es/service.svc/s/GetAttachmentThumbnail?id=AQMkADAwATM0MDAAMS1hYzEyLTk3YWQtMDACLTAwCgBGAAADUi9JFTayIU%2BdexzdiVFrcQcAZHr6IXsDJEKNh9KHEDAiSQAAAgEMAAAA6yOpHmmc9kKeBwl2NaXxwQAB3DZ58QAAAAESABAAs2ovroEX%2FkaQ0n5R5uYAbSM%3D&thumbnailType=2&owa=outlook.live.com&scriptVer=2019021801.07&isc=1&X-OWA-CANARY=Ev3FKf5hvk-IzwJqphu9WrB0f-OQmtYYxa8Ban5HN04bBDcwPijvKoO8Dn2dCRjLd5Hwv7IRt7Q.&token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjA2MDBGOUY2NzQ2MjA3MzdFNzM0MDRFMjg3QzQ1QTgxOENCN0NFQjgiLCJ4NXQiOiJCZ0Q1OW5SaUJ6Zm5OQVRpaDhSYWdZeTN6cmciLCJ0eXAiOiJKV1QifQ.eyJ2ZXIiOiJFeGNoYW5nZS5DYWxsYmFjay5WMSIsImFwcGN0eHNlbmRlciI6Ik93YURvd25sb2FkQDg0ZGY5ZTdmLWU5ZjYtNDBhZi1iNDM1LWFhYWFhYWFhYWFhYSIsImFwcGN0eCI6IntcIm1zZXhjaHByb3RcIjpcIm93YVwiLFwicHJpbWFyeXNpZFwiOlwiUy0xLTI4MjctMjEyOTkzLTI4ODY4OTk2MjlcIixcInB1aWRcIjpcIjkxNDgwMDg1NjE3NjU1N1wiLFwib2lkXCI6XCIwMDAzNDAwMS1hYzEyLTk3YWQtMDAwMC0wMDAwMDAwMDAwMDBcIixcInNjb3BlXCI6XCJPd2FEb3dubG9hZFwifSIsIm5iZiI6MTU1MTAzNzU4MCwiZXhwIjoxNTUxMDM4MTgwLCJpc3MiOiIwMDAwMDAwMi0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDBAODRkZjllN2YtZTlmNi00MGFmLWI0MzUtYWFhYWFhYWFhYWFhIiwiYXVkIjoiMDAwMDAwMDItMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwL2F0dGFjaG1lbnQub3V0bG9vay5saXZlLm5ldEA4NGRmOWU3Zi1lOWY2LTQwYWYtYjQzNS1hYWFhYWFhYWFhYWEifQ.i77F1hr262AutEIkE8-X-6F_5kkiwwLx-heXz7FYkVltfZo1Wr-5Rem5hR-7gCHlG0Ms1_T6UjUfaVFTSPjmW13T1adGJku4ga_HDTm_w3udKBfRvKyIvAJ_li6MsxxTAy1zuU5SlC3kZOmkvL7rO1-Jzc7ZZt77QSuZxyul5H2zZI7dajGfEDVHVlrT5ItjV9-fiNmAEjPmlIVNIArW_7ErxLcoYpZKddkqPyEFP1_TpOfl7mi3JWGLZwUKuA4bN9lGGNp5H-p7_bYrgDazzEBhA4kOeLDSCPEcLH_1MKcXV7w55Q8PUJ0R4zJJocU0QYSxEKmlCxXzJ4I8oT3DVA&animation=true");
+    background-image: url("../src/img/pkm__0016_Group-2 copy.png");
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 .ghost{
-    background-image: url("https://attachment.outlook.live.net/owa/lucero_dn@hotmail.es/service.svc/s/GetAttachmentThumbnail?id=AQMkADAwATM0MDAAMS1hYzEyLTk3YWQtMDACLTAwCgBGAAADUi9JFTayIU%2BdexzdiVFrcQcAZHr6IXsDJEKNh9KHEDAiSQAAAgEMAAAA6yOpHmmc9kKeBwl2NaXxwQAB3DZ58QAAAAESABAAl0XKPtuEckGt5kZLSO5pXw%3D%3D&thumbnailType=2&owa=outlook.live.com&scriptVer=2019021801.07&isc=1&X-OWA-CANARY=Ev3FKf5hvk-IzwJqphu9WrB0f-OQmtYYxa8Ban5HN04bBDcwPijvKoO8Dn2dCRjLd5Hwv7IRt7Q.&token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjA2MDBGOUY2NzQ2MjA3MzdFNzM0MDRFMjg3QzQ1QTgxOENCN0NFQjgiLCJ4NXQiOiJCZ0Q1OW5SaUJ6Zm5OQVRpaDhSYWdZeTN6cmciLCJ0eXAiOiJKV1QifQ.eyJ2ZXIiOiJFeGNoYW5nZS5DYWxsYmFjay5WMSIsImFwcGN0eHNlbmRlciI6Ik93YURvd25sb2FkQDg0ZGY5ZTdmLWU5ZjYtNDBhZi1iNDM1LWFhYWFhYWFhYWFhYSIsImFwcGN0eCI6IntcIm1zZXhjaHByb3RcIjpcIm93YVwiLFwicHJpbWFyeXNpZFwiOlwiUy0xLTI4MjctMjEyOTkzLTI4ODY4OTk2MjlcIixcInB1aWRcIjpcIjkxNDgwMDg1NjE3NjU1N1wiLFwib2lkXCI6XCIwMDAzNDAwMS1hYzEyLTk3YWQtMDAwMC0wMDAwMDAwMDAwMDBcIixcInNjb3BlXCI6XCJPd2FEb3dubG9hZFwifSIsIm5iZiI6MTU1MTAzNzU4MCwiZXhwIjoxNTUxMDM4MTgwLCJpc3MiOiIwMDAwMDAwMi0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDBAODRkZjllN2YtZTlmNi00MGFmLWI0MzUtYWFhYWFhYWFhYWFhIiwiYXVkIjoiMDAwMDAwMDItMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwL2F0dGFjaG1lbnQub3V0bG9vay5saXZlLm5ldEA4NGRmOWU3Zi1lOWY2LTQwYWYtYjQzNS1hYWFhYWFhYWFhYWEifQ.i77F1hr262AutEIkE8-X-6F_5kkiwwLx-heXz7FYkVltfZo1Wr-5Rem5hR-7gCHlG0Ms1_T6UjUfaVFTSPjmW13T1adGJku4ga_HDTm_w3udKBfRvKyIvAJ_li6MsxxTAy1zuU5SlC3kZOmkvL7rO1-Jzc7ZZt77QSuZxyul5H2zZI7dajGfEDVHVlrT5ItjV9-fiNmAEjPmlIVNIArW_7ErxLcoYpZKddkqPyEFP1_TpOfl7mi3JWGLZwUKuA4bN9lGGNp5H-p7_bYrgDazzEBhA4kOeLDSCPEcLH_1MKcXV7w55Q8PUJ0R4zJJocU0QYSxEKmlCxXzJ4I8oT3DVA&animation=true");
+    background-image: url("../src/img/pkm__0002_Group-2.png");
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 .dragon {
-    background-image: url("https://attachment.outlook.live.net/owa/lucero_dn@hotmail.es/service.svc/s/GetAttachmentThumbnail?id=AQMkADAwATM0MDAAMS1hYzEyLTk3YWQtMDACLTAwCgBGAAADUi9JFTayIU%2BdexzdiVFrcQcAZHr6IXsDJEKNh9KHEDAiSQAAAgEMAAAA6yOpHmmc9kKeBwl2NaXxwQAB3DZ58QAAAAESABAAIfsoYlVIukOXEJ1%2BODOxZQ%3D%3D&thumbnailType=2&owa=outlook.live.com&scriptVer=2019021801.07&isc=1&X-OWA-CANARY=Ev3FKf5hvk-IzwJqphu9WrB0f-OQmtYYxa8Ban5HN04bBDcwPijvKoO8Dn2dCRjLd5Hwv7IRt7Q.&token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjA2MDBGOUY2NzQ2MjA3MzdFNzM0MDRFMjg3QzQ1QTgxOENCN0NFQjgiLCJ4NXQiOiJCZ0Q1OW5SaUJ6Zm5OQVRpaDhSYWdZeTN6cmciLCJ0eXAiOiJKV1QifQ.eyJ2ZXIiOiJFeGNoYW5nZS5DYWxsYmFjay5WMSIsImFwcGN0eHNlbmRlciI6Ik93YURvd25sb2FkQDg0ZGY5ZTdmLWU5ZjYtNDBhZi1iNDM1LWFhYWFhYWFhYWFhYSIsImFwcGN0eCI6IntcIm1zZXhjaHByb3RcIjpcIm93YVwiLFwicHJpbWFyeXNpZFwiOlwiUy0xLTI4MjctMjEyOTkzLTI4ODY4OTk2MjlcIixcInB1aWRcIjpcIjkxNDgwMDg1NjE3NjU1N1wiLFwib2lkXCI6XCIwMDAzNDAwMS1hYzEyLTk3YWQtMDAwMC0wMDAwMDAwMDAwMDBcIixcInNjb3BlXCI6XCJPd2FEb3dubG9hZFwifSIsIm5iZiI6MTU1MTAzNzU4MCwiZXhwIjoxNTUxMDM4MTgwLCJpc3MiOiIwMDAwMDAwMi0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDBAODRkZjllN2YtZTlmNi00MGFmLWI0MzUtYWFhYWFhYWFhYWFhIiwiYXVkIjoiMDAwMDAwMDItMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwL2F0dGFjaG1lbnQub3V0bG9vay5saXZlLm5ldEA4NGRmOWU3Zi1lOWY2LTQwYWYtYjQzNS1hYWFhYWFhYWFhYWEifQ.i77F1hr262AutEIkE8-X-6F_5kkiwwLx-heXz7FYkVltfZo1Wr-5Rem5hR-7gCHlG0Ms1_T6UjUfaVFTSPjmW13T1adGJku4ga_HDTm_w3udKBfRvKyIvAJ_li6MsxxTAy1zuU5SlC3kZOmkvL7rO1-Jzc7ZZt77QSuZxyul5H2zZI7dajGfEDVHVlrT5ItjV9-fiNmAEjPmlIVNIArW_7ErxLcoYpZKddkqPyEFP1_TpOfl7mi3JWGLZwUKuA4bN9lGGNp5H-p7_bYrgDazzEBhA4kOeLDSCPEcLH_1MKcXV7w55Q8PUJ0R4zJJocU0QYSxEKmlCxXzJ4I8oT3DVA&animation=true");
+    background-image: url("../src/img/pkm__0012_Group-2.png");
     background-repeat: no-repeat;
     background-size: 100%;
+}
+
+.caja {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+
+/* Ordernar */
+
+.orderBox {
+    height: 50px;
+    width: 160px;
+    border-radius:;
+   
+    /*Flex*/
+    display: flex;
+    align-content: flex-end;
+    justify-content: right;
 }

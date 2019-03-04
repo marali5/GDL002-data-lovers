@@ -1,4 +1,4 @@
-const data = (window.POKEMON.pokemon);
+let card = document.querySelector("#listaDePokemones");
 
 let buttons= Array.from(document.getElementsByClassName("botonAccion"));
 console.log (buttons);
@@ -9,20 +9,35 @@ for(let i = 0; i < buttons.length ; i++) {
     });
 }
 
-const dataLovers = (data, type) => {
- const newArray= data.filter(pokemon => (pokemon.type[0] == type || pokemon.type[1] == type));
- newArray.forEach(element => console.log(element.name));
- print(newArray);
-}
-
-const print= (data) => {
+const showCard= (data) => {
+    document.getElementById("listaDePokemones").innerHTML = "";
  for (let i=0;i<data.length; i++){
  const listaDePokemones= document.getElementById("listaDePokemones");
- const span=document.createElement("span");
- const texto=  document.createTextNode (data[i].name+' '+data[i].type+' '+data[i].num);
- span.appendChild(texto);
- listaDePokemones.appendChild(span);
+ const div=document.createElement("div");
+ div.innerHTML = pokemonTemplate(data[i]);
+ listaDePokemones.appendChild(div);
  }
+};
+
+function pokemonTemplate (singlePokemon) {
+    let pokemonCardTemplate= `
+    <div id= "info" class= "singlePokemon">
+    <button class="namepk">${singlePokemon.name}
+    <img src="${singlePokemon.img}">"${singlePokemon.type}"<br>${singlePokemon.num}"</button>
+    </div>
+    `;
+    return pokemonCardTemplate;
 }
+
+//const orderList = document.getElementById('order');
+
+  //  orderList.addEventListener('change', () => {
+
+    //    window.dataLovers.order(POKEMON.pokemon,status);
+
+      //  showCard(newArray);
+
+    //});
+
 
 
