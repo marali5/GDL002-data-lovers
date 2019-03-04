@@ -218,20 +218,20 @@ nav li:hover > ul > li {
 
 .fighting {
     background-image: url("../src/img/pkm__0008_Group-2.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
+   background-repeat: no-repeat;
+   background-size: 100%;
 }
 
 .rock {
-    background-image: url("../src/img/pkm__0008_Group-2.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
+   background-image: url("../src/img/pkm__0016_Group-2 copy.png");
+   background-repeat: no-repeat;
+   background-size: 100%;
 }
  
 .ice {
-    background-image: url("../src/img/pkm__0016_Group-2 copy.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
+   background-image: url("../src/img/pkm__0004_Group-2.png");
+   background-repeat: no-repeat;
+   background-size: 100%
 }
 
 .ghost{
